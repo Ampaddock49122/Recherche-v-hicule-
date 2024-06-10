@@ -1,9 +1,9 @@
-# Recherche-v-hicule-<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recherche de Véhicules</title>
+    <title>Questionnaire de Recherche de Véhicules</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,7 +51,7 @@
 <body>
 
 <div class="container">
-    <h2>Recherche de Véhicules</h2>
+    <h2>Questionnaire de Recherche de Véhicules</h2>
     <form action="/search_results" method="get">
         <div class="form-group">
             <label for="vehicleType">Type de véhicule:</label>
@@ -92,6 +92,22 @@
                 <option value="electric">Électrique</option>
                 <option value="hybrid">Hybride</option>
             </select>
+        </div>
+        <div class="form-group">
+            <label for="transmission">Type de transmission:</label>
+            <select id="transmission" name="transmission">
+                <option value="">Sélectionner un type</option>
+                <option value="manual">Manuelle</option>
+                <option value="automatic">Automatique</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="color">Couleur:</label>
+            <input type="text" id="color" name="color" placeholder="Ex: Noir, Blanc, Rouge">
+        </div>
+        <div class="form-group">
+            <label for="features">Caractéristiques supplémentaires:</label>
+            <textarea id="features" name="features" rows="4" placeholder="Ex: GPS, Climatisation, Sièges chauffants"></textarea>
         </div>
         <div class="form-group">
             <button type="submit">Rechercher</button>
