@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire de Recherche de Véhicules</title>
+    <title>Formulaire de Demande de Recherche de Véhicule</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,7 +30,8 @@
             color: #333;
         }
         .form-group input,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
@@ -51,8 +52,20 @@
 <body>
 
 <div class="container">
-    <h2>Questionnaire de Recherche de Véhicules</h2>
-    <form action="/search_results" method="get">
+    <h2>Formulaire de Demande de Recherche de Véhicule</h2>
+    <form action="/submit_vehicle_request" method="post">
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Téléphone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+        </div>
         <div class="form-group">
             <label for="vehicleType">Type de véhicule:</label>
             <select id="vehicleType" name="vehicleType" required>
@@ -110,7 +123,7 @@
             <textarea id="features" name="features" rows="4" placeholder="Ex: GPS, Climatisation, Sièges chauffants"></textarea>
         </div>
         <div class="form-group">
-            <button type="submit">Rechercher</button>
+            <button type="submit">Soumettre la demande</button>
         </div>
     </form>
 </div>
